@@ -3,5 +3,17 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('home');
+
+    $data = [
+
+        'datiUtente' => [
+            
+            'Mario',
+            'Rossi',
+            '30'
+        ]
+
+    ];
+
+    return view('home', $data);
 });

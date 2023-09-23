@@ -12,7 +12,8 @@
 
     <!-- Framework Bootstrap css  -->
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 
     <!-- Font Awesome CDN  -->
 
@@ -23,19 +24,28 @@
 <body>
 
     <main>
-    
+
         <div class="container mt-5">
 
             <div class="text-center mt-4">
-                <h1>Hello Laravel</h1>
+                <h1 class="mt-5">Hello Laravel</h1>
+                <h2 class="mt-5">Ti diamo il benvenuto</h2>
             </div>
 
+            @foreach ($datiUtente as $el)
+
+                <ol class="list-group list-group-numbered mt-5">
+                    <li>{{$el}}</li>
+                </ol>
+
+            @endforeach
+
         </div>
-    
+
     </main>
-    
-    
-    </body>
-    
-    
-    </html>
+
+    <script src="./script.js"></script>
+</body>
+
+
+</html>
